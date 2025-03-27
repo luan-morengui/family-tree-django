@@ -15,5 +15,5 @@ EXPOSE 8000
 
 # Comando para rodar o Django (substitua conforme necessário)
 #CMD ["gunicorn", "--bind", "0.0.0.0:8000", "seu_projeto.wsgi:application"]
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8070"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8090"]
 
