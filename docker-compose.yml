@@ -14,7 +14,11 @@ services:
       DB_PORT: ${DB_PORT} # Porta do banco de dados
       DEBUG: "False"
       ALLOWED_HOSTS: "*"
+    volumes:
+    - django_static:/app/static
+    - django_media:/app/media
     restart: always
 
 volumes:
-
+  django_static:
+  django_media:
