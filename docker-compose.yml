@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  django_app:
+    image: family-tree
+    container_name: family-tree
+    network_mode: bridge
+    environment:
+      DB_ENGINE: django.db.backends.postgresql
+      DB_NAME: ${DB_NAME} # Nome do banco de dados
+      DB_USER: ${DB_USER} # Usuário do banco
+      DB_PASSWORD: ${DB_PASSWORD} # Senha do banco
+      DB_HOST: ${DB_HOST} # IP ou hostname do banco de dados
+      DB_PORT: ${DB_PORT} # Porta do banco de dados
+      DEBUG: "False"
+      ALLOWED_HOSTS: "*"
+    restart: always
+
+volumes:
+
